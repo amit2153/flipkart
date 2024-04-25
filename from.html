@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>FORM</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+    function myname() {
+      let a = document.forms["mypage"]["amit"].value;
+      let b = document.forms["mypage"]["pass"].value;
+      let c = document.forms["mypage"]["pass1"].value;
+      if (a == null || a == "") {
+        alert("error");
+        return false;
+      }
+
+      else if (b.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        return false;
+      }
+
+      else if (c != b) {
+        alert("Password are not same.");
+        return false;
+      }
+    }
+  </script>
+
+</head>
+
+<body>
+
+  <div class="con">
+    <form name="mypage" action="ampics.html" onsubmit="return myname()" method="post">
+
+      <h1>LOG IN</h1>
+      <div class="a1">
+        <input type="text" name="amit" maxlength="25" placeholder="username">
+      </div>
+      <div class="a2">
+        <input type="password" name="pass" maxlength="10" placeholder="password">
+      </div>
+      <div class="a3">
+        <input type="password" name="pass1" maxlength="10" placeholder="comfim password" class="form-control">
+      </div>
+      <CENTER>
+        <div>
+          <input type="submit" value="submit" inline-block id="btn">
+        </div>
+      </CENTER>
+      <div class="button-2">
+
+        <button class="button-1"><a href="ampics.html">Back</a></button>
+        <button class="button-3"><a href="#">Help</a></button>
+
+      </div>
+      </from>
+
+  </div>
+</body>
+
+</html>
